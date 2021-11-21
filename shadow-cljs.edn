@@ -1,0 +1,16 @@
+{:source-paths
+ ["src/dev"
+  "src/main"
+  "src/test"]
+
+ :dependencies
+ [[reagent "1.1.0"]]
+
+ :dev-http {8083 "public"}
+ :nrepl {:port 55555}
+
+ :builds
+ {:frontend
+  {:target :browser
+   :output-dir "public/scripts"
+   :modules {:main {:init-fn core/start}}}}}
